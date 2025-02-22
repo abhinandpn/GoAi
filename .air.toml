@@ -1,13 +1,13 @@
 root = "."
 testdata_dir = "testdata"
-tmp_dir = "tmp"
+tmp_dir = "cmd"  # Change tmp to cmd
 
 [build]
   args_bin = []
-  bin = "./tmp/main"
-  cmd = "go build -o ./tmp/main ."
+  bin = "./cmd/main"  # Change output binary location to cmd folder
+  cmd = "go build -o ./cmd/main ./cmd/main.go"  # Build only cmd/main.go
   delay = 1000
-  exclude_dir = ["assets", "tmp", "vendor", "testdata"]
+  exclude_dir = ["assets", "vendor", "testdata"]  # Remove "tmp"
   exclude_file = []
   exclude_regex = ["_test.go"]
   exclude_unchanged = false
