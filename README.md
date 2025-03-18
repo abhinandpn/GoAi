@@ -1,1 +1,1 @@
-# GoCassandra
+# GoAi
